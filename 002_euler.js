@@ -4,20 +4,16 @@
 
 By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.*/
 
-
-
 function fibonacci(num){
   var a = 1, b = 0, temp;
   var sum = 0
-  while (a < 4000000){
+  while (a < num){
     temp = a;
     a = a + b;
     b = temp;
-    num--;
     if (a%2===0) {
       sum = sum + a;
     }
   }
-
   return sum;
 }
